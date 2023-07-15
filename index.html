@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+          <h2>crud</h2>
+          <p>product management system</p>
+
+
+        </div>
+
+        <div class="inputs">
+        
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup ="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup ="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup ="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup ="getTotal()" type="number" id="disscount" placeholder="disscount">
+                <small id="total">3232</small>
+            </div>
+
+            <input type="number" id="count" placeholder="count ">
+            <input type="text" id="catogery" placeholder="catogery">
+            <button id="submit">Create</button>
+
+        </div>
+
+        <div class="outputs">
+             <div class="searchblock">
+                 <input type="text" id="search" placeholder="search" onkeyup="searchData(this.value)">
+                 <div class="btnsearch">
+                    <button onclick="getSearch(this.id)" id="searchtitle">Search By Title</button>
+                    <button onclick="getSearch(this.id)" id="searchCatogery">Search By Catogery</button>
+                 </div>
+
+             </div>
+
+             <div id="deleteall">
+                
+             </div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>disscount</th>
+                <th>total</th>
+                <th>catogery</th>
+                <th>update</th>
+                <th>delete</th>
+            
+            </tr>
+
+            <tbody id="tbody">
+               
+            </tbody>
+
+        
+        </table>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="mais.js"></script>
+</body>
+</html>
